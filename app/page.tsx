@@ -407,7 +407,7 @@ const startTranslation = async () => {
 
                     {status === "completed" && jobId && (
                       <a
-                        href={`${process.env.NEXT_PUBLIC_API_URL}/${jobId}`}
+                        href={`${process.env.NEXT_PUBLIC_API_URL}/api/download/${jobId}`}
                         download
                         className="w-full mt-3 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-medium py-2 rounded-xl text-xs shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
                       >
