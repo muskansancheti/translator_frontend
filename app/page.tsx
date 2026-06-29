@@ -407,7 +407,7 @@ const startTranslation = async () => {
 
                     {status === "completed" && jobId && (
                       <a
-                        href={`http://localhost:5000/api/download/${jobId}`}
+                        href={`${process.env.NEXT_PUBLIC_API_URL}/${jobId}`}
                         download
                         className="w-full mt-3 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-medium py-2 rounded-xl text-xs shadow-lg shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
                       >
@@ -474,7 +474,7 @@ const startTranslation = async () => {
                       </span>
                       <div className="flex items-center gap-2">
                         <a 
-                          href={`http://localhost:5000/api/view/original/${jobId}`} 
+                          href={`${process.env.NEXT_PUBLIC_API_URL}/api/view/original/${jobId}`} 
                           target="_blank" 
                           rel="noreferrer"
                           className="p-1 rounded hover:bg-slate-800 text-slate-400 hover:text-slate-200 transition-colors"
@@ -495,7 +495,7 @@ const startTranslation = async () => {
                     </div>
                     <div className="flex-1 bg-slate-950 flex items-center justify-center p-1">
                       <iframe 
-                        src={`http://localhost:5000/api/view/original/${jobId}#toolbar=0`} 
+                        src={`${process.env.NEXT_PUBLIC_API_URL}/api/view/original/${jobId}#toolbar=0`} 
                         className="w-full h-full border-none rounded-xl"
                       />
                     </div>
@@ -514,7 +514,7 @@ const startTranslation = async () => {
                         {status === "completed" && (
                           <>
                             <a 
-                              href={`http://localhost:5000/api/view/translated/${jobId}`} 
+                              href={`${process.env.NEXT_PUBLIC_API_URL}/api/view/translated/${jobId}`} 
                               target="_blank" 
                               rel="noreferrer"
                               className="p-1 rounded hover:bg-slate-800 text-slate-400 hover:text-slate-200 transition-colors"
@@ -538,7 +538,7 @@ const startTranslation = async () => {
                     <div className="flex-1 bg-slate-950 flex items-center justify-center p-1">
                       {status === "completed" ? (
                         <iframe 
-                          src={`http://localhost:5000/api/view/translated/${jobId}#toolbar=0`} 
+                          src={`${process.env.NEXT_PUBLIC_API_URL}/api/view/translated/${jobId}#toolbar=0`} 
                           className="w-full h-full border-none rounded-xl"
                         />
                       ) : (
